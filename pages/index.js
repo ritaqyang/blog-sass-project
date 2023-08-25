@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {useUser} from '@auth0/nextjs-auth0/client'; 
+import Image from "next/image";
 export default function Home() {
   
   const { user } = useUser(); //auth0 use react context 
@@ -13,7 +14,20 @@ export default function Home() {
       <div>
         { !!user ? (
           <div>
-           <div>all the user info </div>
+           <div>
+              <Image
+                src={user.picture}
+                alt={user.name}
+                height={50}
+                width={50} />
+              
+              <div> {user.email} </div> 
+              
+              
+            </div>
+
+            
+            
             <Link href="/api/auth/logout">Logout</Link>
 
           </div>
