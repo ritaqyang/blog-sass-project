@@ -1,11 +1,11 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 import React from 'react'; 
-import { AppLayout } from '../../components/AppLayout';
+import { AppLayout } from '../../components/AppLayout/AppLayout';
 
 export default function NewPost() {
   return (
     <div>
-      <h2> new post pagfe </h2>
+      <h2> new post page </h2>
     </div>
   )
 };
