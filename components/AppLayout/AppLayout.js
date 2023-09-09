@@ -6,7 +6,8 @@ import { Logo } from '../logo';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const AppLayout = ({
-    chidlren,
+    children,
+    availableTokens,
 
 }) => {
     const { user } = useUser();
@@ -23,7 +24,7 @@ export const AppLayout = ({
                         New Post 
                     </Link>
 
-                    <Link href="/post/token-topup" className='block mt-2 text-center'>
+                    <Link href="/token-topup" className='block mt-2 text-center'>
                         <FontAwesomeIcon icon={faCoins} className="text-yellow-500" />
                         <span className="pl-1">0 tokens available</span>
                     </Link>
@@ -56,7 +57,7 @@ export const AppLayout = ({
             )}
                 </div>
             </div>
-            
+            { children }
           
          </div>
     );
